@@ -1,11 +1,7 @@
 <template>
-  <div id="app">
-    <nav>
-      <h1>otomo</h1>
-      <p>バンドメンバー募集</p>
-      <p>セッションメンバー募集</p>
-      <p>ライブ告知</p>
-    </nav>
+  <div>
+    <router-view name="header"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,7 +9,6 @@
 export default {
   data() {
     return {
-      message: "Hello Vue!"
     }
   }
 }
