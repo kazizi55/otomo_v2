@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <nav>
+      <h1>otomo</h1>
+      <p>バンドメンバー募集</p>
+      <p>セッションメンバー募集</p>
+      <p>ライブ告知</p>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  data: function () {
+  data() {
     return {
       message: "Hello Vue!"
     }
@@ -15,8 +20,5 @@ export default {
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+
 </style>
