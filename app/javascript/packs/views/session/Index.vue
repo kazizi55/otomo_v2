@@ -10,6 +10,7 @@
         <tr v-for="session in sessions" :key="session.id">
           <td>{{ session.id }}</td>
           <td>{{ session.name }}</td>
+          <td><router-link :to='{ name: "SessionShow", params: { id: session.id } }'>詳細</router-link></td>
         </tr>
       </tbody>
     </table>

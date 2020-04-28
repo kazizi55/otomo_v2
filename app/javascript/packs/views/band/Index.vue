@@ -10,6 +10,7 @@
         <tr v-for="band in bands" :key="band.id">
           <td>{{ band.id }}</td>
           <td>{{ band.name }}</td>
+          <td><router-link :to='{ name: "BandShow", params: { id: band.id } }'>詳細</router-link></td>
         </tr>
       </tbody>
     </table>

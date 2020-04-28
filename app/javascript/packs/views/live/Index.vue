@@ -10,6 +10,7 @@
         <tr v-for="live in lives" :key="live.id">
           <td>{{ live.id }}</td>
           <td>{{ live.name }}</td>
+          <td><router-link :to='{ name: "LiveShow", params: { id: live.id } }'>詳細</router-link></td>
         </tr>
       </tbody>
     </table>
