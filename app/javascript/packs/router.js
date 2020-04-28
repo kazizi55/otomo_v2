@@ -13,7 +13,6 @@ const LiveShow = () => import(/* webpackChunkName: "LiveShow" */ './views/live/S
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
   routes:[
     {
       path: '/',
