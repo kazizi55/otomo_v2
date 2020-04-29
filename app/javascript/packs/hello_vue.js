@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from '../app.vue'
 import router from './router'
+import store from './store'
 import axios from 'axios'
 import { securedAxiosInstance, plainAxiosInstance } from './axios'
 
@@ -12,6 +13,7 @@ Vue.use(axios, {
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     router,
+    store,
     securedAxiosInstance,
     plainAxiosInstance,
     render: h => h(App)
