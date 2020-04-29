@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 const Home = () => import(/* webpackChunkName: "Home" */ './views/Home.vue');
+const SignIn = () => import(/* webpackChunkName: "SignIn" */ './views/SignIn.vue');
+const SignUp = () => import(/* webpackChunkName: "SignUp" */ './views/SignUp.vue');
 const Header = () => import(/* webpackChunkName: "Header" */ './views/Header.vue');
 const Band = () => import(/* webpackChunkName: "Band" */ './views/band/Index.vue');
 const BandShow = () => import(/* webpackChunkName: "BandShow" */ './views/band/Show.vue');
@@ -18,6 +20,20 @@ export default new Router({
       path: '/',
       components: {
         default: Home,
+        header: Header
+      }
+    },
+    {
+      path: '/signin',
+      components: {
+        default: SignIn,
+        header: Header
+      }
+    },
+    {
+      path: '/signup',
+      components: {
+        default: SignUp,
         header: Header
       }
     },
