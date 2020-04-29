@@ -16,7 +16,7 @@ export default {
   },
   mounted(){
     axios
-      .get(`/api/v1/sessions/${this.$route.params.id}`)
+      .get(`/api/sessions/${this.$route.params.id}`)
       .then(response => (this.session = response.data))
   }
 }

@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < ApiController
+class Api::SessionsController < ApiController
   before_action :set_session, only: [:show]
   def index
     sessions = Session.all

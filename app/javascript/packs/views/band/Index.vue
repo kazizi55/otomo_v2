@@ -28,7 +28,7 @@ export default {
   },
   created(){
     axios
-      .get('/api/v1/bands')
+      .get('/api/bands')
       .then(response => (this.bands = response.data))
   }
 }

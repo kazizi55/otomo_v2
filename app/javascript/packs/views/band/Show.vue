@@ -16,7 +16,7 @@ export default {
   },
   mounted(){
     axios
-      .get(`/api/v1/bands/${this.$route.params.id}`)
+      .get(`/api/bands/${this.$route.params.id}`)
       .then(response => (this.band = response.data))
   }
 }

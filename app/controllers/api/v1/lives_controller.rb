@@ -1,4 +1,4 @@
-class Api::V1::LivesController < ApiController
+class Api::LivesController < ApiController
   before_action :set_lives, only: [:show]
   def index
     lives = Live.all
