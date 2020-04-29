@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api, {format: 'json'} do
     resources :bands, only: [:index, :show]
-    resources :jamsessions, only: [:index, :show]
+    resources :jam_sessions, only: [:index, :show]
     resources :lives, only: [:index, :show]
     post   'signup',  controller: :users,    action: :create
     post   'signin',  controller: :sessions, action: :create
