@@ -3,7 +3,6 @@
     <router-link to="/" class="title">Otomo</router-link>
     <br>
     <router-link to="/band">バンドメンバー募集</router-link>
-    <router-link to="/session">セッションメンバー募集</router-link>
     <router-link to="/live">ライブ告知</router-link>
     <router-link to="/signin" v-if="!signedIn">Sign In</router-link>
     <router-link to="/signup" v-if="!signedIn">Sign Up</router-link>

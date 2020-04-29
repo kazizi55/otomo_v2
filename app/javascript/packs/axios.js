@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = 'http://localhost:3000'
 
 const securedAxiosInstance = axios.create({
   baseURL: API_URL,
@@ -31,7 +31,7 @@ securedAxiosInstance.interceptors.request.use(config => {
 
 securedAxiosInstance.interceptors.response.use(null, error => {
   if (error.response && error.response.config && error.response.status === 401) {
-    return plainAxiosInstance.post('/api/refresh', {}, { headers: { 'X-CSRF-TOKEN': localStorage.csrf } })
+    return plainAxiosInstance.post('api/refresh', {}, { headers: { 'X-CSRF-TOKEN': localStorage.csrf } })
       .then(response => {
         localStorage.csrf = response.data.csrf
         localStorage.signedIn = true

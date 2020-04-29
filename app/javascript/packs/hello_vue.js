@@ -2,10 +2,10 @@ import Vue from 'vue'
 import App from '../app.vue'
 import router from './router'
 import store from './store'
-import axios from 'axios'
+import VueAxios from 'vue-axios'
 import { securedAxiosInstance, plainAxiosInstance } from './axios'
 
-Vue.use(axios, {
+Vue.use(VueAxios, {
   secured: securedAxiosInstance,
   plain: plainAxiosInstance
 })
