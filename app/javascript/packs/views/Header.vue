@@ -7,7 +7,7 @@
     <router-link to="/live">ライブ告知</router-link>
     <router-link to="/signin" v-if="!signedIn">Sign In</router-link>
     <router-link to="/signup" v-if="!signedIn">Sign Up</router-link>
-    <a href="/" v-if="signedIn" @click="signOut">Sign out</a>
+    <button v-if="signedIn" @click="signOut">Sign out</button>
   </div>
 </template>
 
