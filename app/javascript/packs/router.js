@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 const Home = () => import(/* webpackChunkName: "Home" */ './views/Home.vue');
+const SignIn = () => import(/* webpackChunkName: "SignIn" */ './views/SignIn.vue');
+const SignUp = () => import(/* webpackChunkName: "SignUp" */ './views/SignUp.vue');
 const Header = () => import(/* webpackChunkName: "Header" */ './views/Header.vue');
 const Band = () => import(/* webpackChunkName: "Band" */ './views/band/Index.vue');
 const BandShow = () => import(/* webpackChunkName: "BandShow" */ './views/band/Show.vue');
-const Session = () => import(/* webpackChunkName: "Session" */ './views/session/Index.vue');
-const SessionShow = () => import(/* webpackChunkName: "SessionShow" */ './views/session/Show.vue');
 const Live = () => import(/* webpackChunkName: "Live" */ './views/live/Index.vue');
 const LiveShow = () => import(/* webpackChunkName: "LiveShow" */ './views/live/Show.vue');
 
@@ -22,6 +22,20 @@ export default new Router({
       }
     },
     {
+      path: '/signin',
+      components: {
+        default: SignIn,
+        header: Header
+      }
+    },
+    {
+      path: '/signup',
+      components: {
+        default: SignUp,
+        header: Header
+      }
+    },
+    {
       path: '/band',
       components: {
         default: Band,
@@ -34,18 +48,6 @@ export default new Router({
       component: BandShow
     },
     {
-      path: '/session',
-      components: {
-        default: Session,
-        header: Header
-      }
-    },
-    {
-      path: '/session/:id',
-      name: 'SessionShow',
-      component: SessionShow
-    },
-    {
       path: '/live',
       components: {
         default: Live,
@@ -56,6 +58,6 @@ export default new Router({
       path: '/live/:id',
       name: 'LiveShow',
       component: LiveShow
-    },
+    }
   ]
 })

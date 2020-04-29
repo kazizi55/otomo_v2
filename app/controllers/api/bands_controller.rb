@@ -1,4 +1,4 @@
-class Api::V1::BandsController < ApiController
+class Api::BandsController < ApplicationController
   before_action :set_band, only: [:show]
   def index
     bands = Band.all

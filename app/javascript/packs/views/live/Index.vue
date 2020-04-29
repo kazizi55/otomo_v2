@@ -28,7 +28,7 @@ export default {
   },
   created(){
     axios
-      .get('/api/v1/lives')
+      .get('/api/lives')
       .then(response => (this.lives = response.data))
   }
 }

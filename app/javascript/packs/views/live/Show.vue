@@ -16,7 +16,7 @@ export default {
   },
   mounted(){
     axios
-      .get(`/api/v1/lives/${this.$route.params.id}`)
+      .get(`/api/lives/${this.$route.params.id}`)
       .then(response => (this.live = response.data))
   }
 }
