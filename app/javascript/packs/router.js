@@ -4,6 +4,7 @@ const Home = () => import(/* webpackChunkName: "Home" */ './views/Home.vue');
 const SignIn = () => import(/* webpackChunkName: "SignIn" */ './views/SignIn.vue');
 const SignUp = () => import(/* webpackChunkName: "SignUp" */ './views/SignUp.vue');
 const Header = () => import(/* webpackChunkName: "Header" */ './views/Header.vue');
+const UserShow = () => import(/* webpackChunkName: "UserShow" */ './views/user/Show.vue');
 const Band = () => import(/* webpackChunkName: "Band" */ './views/band/Index.vue');
 const BandShow = () => import(/* webpackChunkName: "BandShow" */ './views/band/Show.vue');
 const JamSession = () => import(/* webpackChunkName: "JamSession" */ './views/jam_sessions/Index.vue');
@@ -34,6 +35,14 @@ export default new Router({
       path: '/signup',
       components: {
         default: SignUp,
+        header: Header
+      }
+    },
+    {
+      path: '/user/:id',
+      name: 'UserShow',
+      components: {
+        default: UserShow,
         header: Header
       }
     },

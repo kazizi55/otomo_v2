@@ -7,6 +7,7 @@
     <router-link to="/live">ライブ告知</router-link>
     <router-link to="/signin" v-if="!signedIn">Sign In</router-link>
     <router-link to="/signup" v-if="!signedIn">Sign Up</router-link>
+    <router-link v-if="signedIn" :to='{ name: "UserShow", params: { id: this.$store.state.userData.id } }'>{{this.$store.state.userData.name}}さん</router-link>
     <button v-if="signedIn" @click="signOut">Sign out</button>
   </div>
 </template>
@@ -31,6 +32,7 @@
           .then(response => {
             delete localStorage.csrf
             delete localStorage.signedIn
+            delete sessionStorage.otomo
           })
           .catch(error => this.setError(error, 'Cannot sign out'))
       }

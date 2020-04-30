@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
                         value: tokens[:access],
                         httponly: true,
                         secure: Rails.env.production?)
-      render json: { csrf: tokens[:csrf] }
+      render json: { userData: user, csrf: tokens[:csrf] }
     else
       not_authorized
     end
