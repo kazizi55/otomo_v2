@@ -33,6 +33,7 @@
             delete localStorage.csrf
             delete localStorage.signedIn
             delete sessionStorage.otomo
+            this.$router.go({path: this.$router.currentRoute.path, force: true})
           })
           .catch(error => this.setError(error, 'Cannot sign out'))
       }
