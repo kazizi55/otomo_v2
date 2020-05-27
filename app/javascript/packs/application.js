@@ -9,6 +9,7 @@ import "vuetify/dist/vuetify.min.css"
 import "@mdi/font/css/materialdesignicons.css"
 import "material-design-icons-iconfont/dist/material-design-icons.css"
 import '@fortawesome/fontawesome-free/css/all.css'
+import detectBreakpoint from './mixin/detectBreakpoint'
 
 Vue.config.productionTip = true
 
@@ -33,6 +34,8 @@ const vuetify = new Vuetify({
     }
   }
 })
+
+Vue.mixin(detectBreakpoint)
 
 document.addEventListener('DOMContentLoaded', function() {
   window.app = new Vue({
